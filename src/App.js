@@ -26,7 +26,7 @@ class App extends Component {
     e.preventDefault();
 
     this.setState({
-      soma: parseInt(this.state.num1) + parseInt(this.state.num2)
+      soma: this.state.num1 + this.state.num2
     })
   }
 
