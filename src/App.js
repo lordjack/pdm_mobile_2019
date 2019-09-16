@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
+import { Container, Row, Col, Card } from "react-bootstrap";
 
 class App extends Component {
 
@@ -24,7 +25,6 @@ class App extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-
     this.setState({
       soma: parseInt(this.state.num1) + parseInt(this.state.num2)
     })
@@ -33,8 +33,29 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        Menu superior
+        <Container>
+          <Row>
+            <Col sm={3}>
+              <Card style={{ width: '18rem' }}>
+                <Card.Body>
+                  <Card.Title>Card 01</Card.Title>
+                  <Card.Text>
+                    Conteudo
+                                </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={9}>Conteudo Central</Col>
+            <Col sm={3}> Conteudo Lateral </Col>
+          </Row>
+        </Container>
+
+
         <form>
-        <label>Num1</label>
+          <label>Num1</label>
           <input type="text" name="num1"
             value={this.state.num1}
             onChange={e => this.handleChange(e)}
