@@ -52,8 +52,6 @@ class App extends Component {
             <Col sm={3}> Conteudo Lateral </Col>
           </Row>
         </Container>
-
-
         <form>
           <label>Num1</label>
           <input type="text" name="num1"
@@ -95,16 +93,6 @@ const styleDiv = {
   color: 'blue',
 }
 
-
-const styleTitle = {
-  backgroundColor: 'gray',
-  color: 'white',
-}
-
-const styleContent = {
-  backgroundColor: '#608ac1',
-  color: 'white',
-}
 class DivExemplo02 extends Component {
   render() {
     return (
@@ -131,8 +119,8 @@ class Blog extends Component {
     );
     const content = this.props.posts.map((post) =>
       <div key={post.id}>
-        <h3 style={styleTitle}>{post.title}</h3>
-        <p style={styleContent}>{post.content}</p>
+        <h3>{post.title}</h3>
+        <p>{post.content}</p>
       </div>
     );
     return (
@@ -147,9 +135,7 @@ class Blog extends Component {
 
 const posts = [
   { id: 1, title: 'Titulo 01', content: 'Conteudo 01!' },
-  { id: 2, title: 'Titulo 02', content: 'Conteudo 02' },
-  { id: 3, title: 'Titulo 03', content: 'Conteudo 03' },
-  { id: 4, title: 'Titulo 04', content: 'Conteudo 04' }
+  { id: 2, title: 'Titulo 02', content: 'Conteudo 02' }
 ];
 
 export default App;
